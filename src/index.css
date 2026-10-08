@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sinergia: #1b5e3b;
+  --color-sinergia-dark: #13432a;
+  --color-sinergia-light: #e8f3ec;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1ebe57;
+  --font-sans: "Outfit", "Segoe UI", system-ui, sans-serif;
+  --animate-fade-up: fade-up 0.8s ease-out both;
+  --animate-whatsapp-pulse: whatsapp-pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes whatsapp-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(37 211 102 / 45%), 0 20px 40px rgb(20 83 45 / 25%);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgb(37 211 102 / 0%), 0 20px 40px rgb(20 83 45 / 25%);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: #1f2937;
+  background: #f7faf8;
+  -webkit-font-smoothing: antialiased;
+}
